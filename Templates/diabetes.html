@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Input Properties</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='diabetes.css') }}">
+
+</head>
+
+<body>
+
+
+    <main>
+        <h1>Você esta a um passo de receber seu diagnóstico</h1>
+
+        <form action="{{url_for('prever')}}" method="POST" class="container">
+            <label for="genero">Gênero: <span id="genero" class="information_input">?</span>
+                <div class="info">Preencha com seu genero, digite 0 para masculino e 1 para feminino</div>
+            </label>
+            <input type="number" class="input-field" name="genero"><br><br>
+
+            <label for="idade">Idade:<span id="idade" class="information_input">?</span>
+                <div class="info">Preencha com sua idade em numero inteiro</div>
+            </label>
+            <input type="number" class="input-field" name="idade"><br><br>
+
+            <label for="grau_escolaridade">Grau de Escolaridade:<span id="grau_escolaridade"
+                    class="information_input">?</span>
+                <div class="info">Preencha com seu grau de escolaridade, ele é um numero de 0 a 5 sendo 0-Ensino
+                    Fundamental Completo 1- Ensino Médio Completo 2 - Ensino Superior Completo 3 - Mestrado Completo 4 -
+                    Doutorado Completo 5 - Pós-Doutorado Completo</div>
+            </label>
+            <input type="number" class="input-field" name="grau_escolaridade"><br><br>
+
+            <label for="hipertensao">Hipertensão:<span id="dis_hip" class="information_input">?</span>
+                <div class="info">Preencha se você possui hipertensao: 0 para não e 1 para sim</div>
+            </label>
+            <input type="number" class="input-field" name="hipertensao"><br><br>
+
+            <label for="colesterol">Dislipidemia:<span id="dis_hip" class="information_input">?</span>
+                <div class="info">Preencha se você possui dislipidemia: 0 para não e 1 para sim</div>
+            </label>
+            <input type="number" class="input-field" name="colesterol"><br><br>
+
+            <label for="atividade_fisica">Atividade Física:<span id="ativ_fisica" class="information_input">?</span>
+                <div class="info">Preencha se você pratica atividade fisica moderada pelo menos 3x na semana: 0 para não
+                    e 1 para sim</div>
+            </label>
+            <input type="number" class="input-field" name="atividade_fisica"><br><br>
+
+            <label for="peso">Peso:<span id="peso" class="information_input">?</span>
+                <div class="info">Preencha com seu peso exato
+                </div>
+            </label>
+            <input type="number" class="input-field" name="peso"><br><br>
+
+            <label for="altura">Altura:<span id="altura" class="information_input">?</span>
+                <div class="info">Preencha com sua altura exata em centimentros
+                </div>
+            </label>
+            <input type="number" class="input-field" name="altura"><br><br>
+
+            <button type="button" onclick="submitData()" class="submit-button">Submit</button>
+    </main>
+
+    <div id="result"></div>
+    </form>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script>
+        function submitData() {
+            const genero = document.getElementsByName('genero')[0].value;
+            const idade = document.getElementsByName('idade')[0].value;
+            const grau_escolaridade = document.getElementsByName('grau_escolaridade')[0].value;
+            const hipertensao = document.getElementsByName('hipertensao')[0].value;
+            const colesterol = document.getElementsByName('colesterol')[0].value;
+            const atividade_fisica = document.getElementsByName('atividade_fisica')[0].value;
+            const peso = document.getElementsByName('peso')[0].value;
+            const altura = document.getElementsByName('altura')[0].value;
+            const IMC = peso / (altura * altura);
+            console.log("Value; ", IMC);
+
+            // Create a JSON object with the form data
+            const data = {
+                genero: genero,
+                idade: idade,
+                grau_escolaridade: grau_escolaridade,
+                hipertensao: hipertensao,
+                colesterol: colesterol,
+                atividade_fisica: atividade_fisica,
+                peso: peso,
+                altura: altura,
+                IMC: IMC
+            };
+
+            // Send a POST request with the JSON data
+            fetch('/prever', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(data)
+            })
+                .then(response => response.json())
+                .then(result => {
+                    document.getElementById('result').innerHTML = 'API Response: ' + JSON.stringify(result);
+                    console.log("Result: ", result);
+                    // Handle the API response as needed
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                    // Handle errors
+                });
+        }
+
+
+
+
+
+
+
+
+
+    </script>
+    <script src="{{ url_for('static', filename='spanScript.js') }}"></script>
+</body>
+
+</html>

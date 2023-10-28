@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='teste.css') }}">
+  <script src="{{ url_for('static', filename='teste2.js') }}"></script>
+</head>
+
+<body>
+  <form id="formulario">
+
+    <input class="input-field" id="input-1" type="text" placeholder="John Doe" required autofocus />
+    <label for="input-1">
+      <span class="label-text">Nome inteiro</span>
+      <span class="nav-dot"></span>
+      <div class="signup-button-trigger">Sign Up</div>
+    </label>
+    <input class="input-field" id="input-2" type="text" placeholder="Masculino" required autofocus />
+    <label for="input-2">
+      <span class="label-text">Genero</span>
+      <span class="nav-dot"></span>
+    </label>
+    <input class="input-field" id="input-3" type="email" placeholder="email@address.com" required autofocus />
+    <label for="input-3">
+      <span class="label-text">Idade</span>
+      <span class="nav-dot"></span>
+    </label>
+    <select class="input-field" id="input-4">
+      <option value="Possuo">Ensino Médio Completo</option>
+      <option value="Não Possuo">Ensino Superior Completo</option>
+      <option value="Não sei dizer">Mestrado Completo</option>
+      <option value="Não sei dizer">Doutorado Completo</option>
+      <option value="Não sei dizer">Pós-Doutorado Completo</option>
+    </select>
+    <label for="input-4">
+      <span class="label-text">Grau De Escolaridade</span>
+      <span class="nav-dot"></span>
+    </label>
+    <select class="input-field" id="input-5">
+      <option value="Possuo">Possuo</option>
+      <option value="Não Possuo">Não Possuo</option>
+      <option value="Não sei dizer">Não sei dizer</option>
+    </select>
+    <label for="input-5">
+      <span class="label-text">Hipertensão</span>
+      <span class="nav-dot"></span>
+    </label>
+    <select class="input-field" id="input-6">
+      <option value="Possuo">Possuo</option>
+      <option value="Não Possuo">Não Possuo</option>
+      <option value="Não sei dizer">Não sei dizer</option>
+    </select>
+    <label for="input-6">
+      <span class="label-text">Dislipidemia</span>
+      <span class="nav-dot"></span>
+    </label>
+    <select class="input-field" id="input-7">
+      <option value="Pratico">Pratico</option>
+      <option value="Não pratico">Não pratico</option>
+    </select>
+    <label for="input-7">
+      <span class="label-text">Atividade Física</span>
+      <span class="nav-dot"></span>
+    </label>
+    <input class="input-field" id="input-8" type="text" placeholder="75" required autofocus />
+    <label for="input-8">
+      <span class="label-text">Peso</span>
+      <span class="nav-dot"></span>
+    </label>
+    <input class="input-field" id="input-9" type="text" placeholder="170" required autofocus />
+    <label for="input-9">
+      <span class="label-text">Altura</span>
+      <span class="nav-dot"></span>
+    </label>
+    <button type="submit">Create Your Account</button>
+    <p class="tip">Press Tab</p>
+    <div class="signup-button">Sign Up</div>
+
+  </form>
+</body>
+
+</html>

@@ -1,0 +1,100 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: rgb(39, 39, 39);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.container {
+    background-color: #888;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    
+           
+}
+
+.input-field {
+    margin: 10px 0;
+    padding: 0px;
+    width: auto;
+    border: none;
+    border-radius: 5px;
+    margin-bottom: 0px;
+}
+
+.input-field:focus {
+    outline: none;
+}
+
+.submit-button {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.submit-button:hover {
+    background-color: #555;
+}
+h1{
+    color: rgb(189, 188, 188);
+    margin-top: 50px;
+  }
+label{
+    display: block;
+  }
+ 
+  span{
+    
+    color: rgb(0, 0, 0);
+  }
+  #grau_escolaridade{
+    margin-left: 18px;
+  }
+  #dis_hip{
+    margin-left: 80px;
+  }
+  #ativ_fisica{
+    margin-left: 60px;
+  }
+  #idade{
+    margin-left: 128px;
+  }
+  #genero{
+    margin-left: 110px;
+  }
+  #peso{
+    margin-left: 135px;
+  }
+  #altura{
+    margin-left: 125px;
+  }
+  .information_input:hover + .info {
+    display: inline;
+  }
+
+  .info {
+    display: none;
+    position: absolute;
+    background-color: rgb(255, 255, 255);
+    padding-left: 30px;
+    padding-right: 30px;
+    border: 1px solid rgb(0, 0, 0);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  }
+  .info::before {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: auto; /* Adjust this value to position the tail */
+    border-width: 10px;
+    border-style:solid;
+    border-color: transparent transparent #ffffff transparent;
+  }

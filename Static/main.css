@@ -1,0 +1,226 @@
+@charset "UTF-8";
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:300,400,700);
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Open Sans", sans-serif;
+  color: #333;
+}
+
+header {
+  background: #111;
+}
+
+.headline {
+  position: relative;
+  height: 1000px;
+  color: #fff;
+  text-align: center;
+  background: url("https://farm9.staticflickr.com/8088/8363737128_b76782c7a2_b.jpg") no-repeat center center;
+  background-size: cover;
+}
+.headline:after {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(17, 17, 17, 0.5);
+}
+
+.inner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  opacity: 0;
+  z-index: 10;
+  transform: translateX(-50%) translateY(-50%);
+  -webkit-animation: fade-in 0.75s 0.25s ease-in forwards;
+          animation: fade-in 0.75s 0.25s ease-in forwards;
+}
+.inner h1 {
+  margin: 0;
+  font-size: 4em;
+  line-height: 1.2em;
+}
+.inner p {
+  margin: 0;
+  font-size: 1.4em;
+  font-style: italic;
+  font-family: serif;
+}
+
+nav {
+  position: fixed;
+  width: 100%;
+  z-index: 10;
+}
+nav.scrolled {
+  background: rgba(17, 17, 17, 0.9);
+}
+nav ul {
+  float: right;
+  list-style: none;
+  padding: 25px;
+  margin: 0;
+}
+nav li {
+  float: left;
+}
+nav a {
+  font-size: 0.9em;
+  color: #fff;
+  text-decoration: none;
+  margin: 5px 0 0 20px;
+  display: block;
+}
+nav a:hover {
+  color: #ededed;
+}
+
+.logo {
+  height: 75px;
+  float: left;
+}
+.logo:before, .logo:after {
+  position: absolute;
+  font-size: 7em;
+  font-weight: 300;
+  line-height: 0;
+  color: #fff;
+  top: 25px;
+}
+.logo:before {
+  content: "»";
+  left: 20px;
+}
+.logo:after {
+  content: "«";
+  left: 34px;
+}
+
+
+@-webkit-keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.col{
+    margin-left: 70px;
+    border:2px solid white;
+    border-width: 40px;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
+}
+.red{
+    width: 50px;
+    display: block;
+    margin-left: 90px;
+    margin-top: 0px;
+    margin-bottom: 30px;
+}
+#margem{
+    margin-top: 100px;
+    font-size:40px;
+    margin-bottom: 80px;
+}
+#diabetes{
+    
+    width: 730px;
+    
+}
+.altera-cor2{
+    display: flex;
+    height: 50vh;
+    margin-top: 100px;
+    color:#625F62;
+    background-color: #adb1a1;
+    
+   
+}
+  #par {
+    margin-left: 150px;
+    margin-right: 150px;
+    margin-top: 50px;
+    font-size: 25px; 
+  }
+#sabia{
+    font-size: 40px;
+}
+.flex-container {
+    display: flex;
+    align-items: center; 
+    
+    width: 100%;
+    height: 100%;
+}
+
+.flex-container img {
+    flex: 0 0 auto; 
+    margin-right: 20px; 
+    
+}
+
+.flex-container div {
+    flex: 1; 
+}
+.altera-cor{
+    color:#625F62;
+}
+.btn{
+    color: white;
+    background-color: #111;
+    border-color: #333;
+    height: 70px;
+    width: 300px;
+    font-size:18px;
+    margin-left: 50px;
+}
+.text{
+    font-size: 60px;
+}
+.drop-down{
+  display: inline-block;
+  position: relative;
+  margin: 0px;
+}
+.drop-down-content{
+  display: none;
+  position: absolute;
+  /* Set a maximum width if needed */
+ 
+ 
+  box-shadow: 0px 8px 16px 0px rgb(0, 0, 0);
+  background-color:#181D28;
+  background-size: auto;
+  margin: 0px;
+  padding: 0px;
+}
+.drop-down:hover .drop-down-content{
+  display:inline;
+}
+.drop-down-content a {
+  display: block;
+  color: #ffffff;
+  
+  box-shadow: 0px 8px 16px 0px rgb(0, 0, 0);
+  box-sizing:inherit;
+  margin-top: 0px;
+  margin-left: 0px;
+ 
+  padding: 0px;
+  text-decoration: none;
+  font-size: 20px;
+}
