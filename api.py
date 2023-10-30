@@ -55,7 +55,7 @@ def fazer_previsao(dados_de_entrada, nome):
     float_str=str(second_value*100)
     integer_part, decimal_part = float_str.split('.')
     first_two_decimal_digits = decimal_part[:2]
-    print(f" Voce tem: {integer_part}.{first_two_decimal_digits} %  de chance de ser um fudido")
+    print(f" Voce tem: {integer_part}.{first_two_decimal_digits} %  de chance de possuir diabetes")
     
 
 @app.route('/submit_form', methods=['POST'])

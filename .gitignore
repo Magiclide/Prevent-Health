@@ -1,4 +1,4 @@
 .venv/
 Model/.venv/
-__pycache__
-.vscode
+__pycache/
+.vscode/
