@@ -1,71 +1,117 @@
-.mt-4{
-    margin-top:20px !important;
-    font-size: 70px;
-    
-    letter-spacing: 1px;
+
+html,body{
+    overflow-x: hidden;
 }
 .background-image{
-    background:url("good.jpg");
+    
     background-position:center;
     background-size:cover;
     background-repeat: no-repeat;
     height:100vh;
-    display: flex;
+  
+    display:flex;
     flex-direction: column;
-    align-items: center; /* Center the content horizontally if desired */
+    align-items: center; 
     justify-content: center;
     
+}
+.red-text{
+    font-size: 1em;
+}
+
+#carouselExampleIndicators {
+    margin-top: 0px;
+    
+    height: 100%;
+    transform: none;
+    position: relative;
+ 
+}
+.margemImg{
+    margin-top: 6%;
+}
+.carousel-indicators{
+    display: inline;
+    
+   
+     justify-content: center;
+    align-items: center;
+    margin-bottom: 0px;
+    margin-left: 45%;
+    margin-right: 0px;
+    z-index: 1;
+  }
+*{
+    margin: 0px;
+    padding: 0px;
 }
 a{
   text-decoration: none;  
 }
 
 h3{
-    font-size: 60px;
+    font-size:4rem;
+}
+#margem p{
+    font-size: 2rem;
 }
 #margem{
-    font-size:40px;
-    margin-top: 100px;
-    margin-bottom: 80px;
+    margin-top: 10%;
+    margin-left: 0%;
     
+  }
+.cabecalho ul {
+    list-style-type: none;
+  
+    justify-content: space-around; 
+    padding: 2;
+}
+.header-content {
+    display: flex;
+    align-items: center; 
 }
 
+
+.cabecalho li {
+    display: inline-block;
+}
 h1{
-    font-size: 40px;
-    text-transform: uppercase;
-    letter-spacing: 4px;
+    font-size: 3vw;
    
-    color:#83F6DB;
+    letter-spacing: 0px;
+   
+    color:#0A2F46;
     display: inline;
     
 }
-.square {
-    width: 200px;
-    height: 200px;
-    border: 2px solid black; /* Cor e espessura da borda */
-  }
-.text{
-    position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+
+
+.row{
+    gap: 6vw;
 }
-#cor{
-    color:white;
-}
-.btn{
-    height: 70px;
-    width: 300px;
-    font-size:18px;
-}
+
 .col{
-    margin-left: 70px;
-    border:2px solid white;
-    border-width: 40px;
+      
+    border:1vw solid white;
+    border-width: 5vw;
+  
     box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
+    margin-right: 0em;
+    margin-top: 0rem;
+    height: 14em;
+    margin-left: 0em;
+    
+    
+    margin-bottom: 0rem;
+    position: relative;
+ 
 }
+.container {
+    display: flex;
+  }
 .altera-cor{
-    color:#625F62;
+ 
+    color:#000000;
 }
 header{
     background-color: rgb(255, 255, 255);
@@ -73,34 +119,44 @@ header{
     right:0px;
     top:0px;
     left:0px;
-    display:inline;
+    display: inline;
+    z-index: 2;
+    height: 8%;
 }
-ul,li,nav{
+.cabecalho{
     display:inline;
-    font-size:20px;
+    font-size:2vw;
    
 }
+li{
+    display: inline-block;
+	margin: 0 10px;
+    font-weight: bold;
+}
 ul li:nth-child(1){
-    margin-left:200px;
+    margin-left:10rem;
 }
 ul li:nth-child(2){
-    margin-left:300px;
+    margin-left:10rem;
 }
 ul li:nth-child(3){
-    margin-left:400px;
+    margin-left:10rem;
 }
 a{
-    color:black;
+    text-decoration: none;
+    color: black;
 }
-p{
-    font-size:20px;
-}
+
 .red{
-    width: 50px;
+   width: 4rem;
+   transform: translateX(-50%);
+   left: 50%;
+   
+   position: relative;
     display: block;
-    margin-left: 90px;
+    margin-left: 0px;
     margin-top: 0px;
-    margin-bottom: 30px;
+    margin-bottom: 5%;
 }
 .flex-container {
     display: flex;
@@ -110,6 +166,10 @@ p{
     height: 100%;
 }
 
+
+.d-flex {
+    flex: 1;
+}
 .flex-container img {
     flex: 0 0 auto; 
     margin-right: 20px; 
@@ -122,50 +182,43 @@ p{
 
 #diabetes{
     
-    width: 730px;
+    max-width: 100%;
+    height: 100%;
     
 }
 .altera-cor2{
     height: 50vh;
-    margin-top: 100px;
-    color:#625F62;
-    background-color: #97B8BA;
-}
-#par{
-    margin-left: 150px;
-    margin-right: 150px;
-    margin-top: 50px;
-    font-size: 25px;
+    margin-top: 17rem;
+    color:#ffffff;
+    background-color: #5b92db;
 }
 #sabia{
-    font-size: 40px;
+
+    font-size: 2rem;
 }
-#cabeca{
-    background-color: #97B8BA;
-}
-.button-container {
-    margin-top: 20px; /* Adjust this margin as needed to create spacing between h2 and buttons */
+#par{
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-top: 0px;
+    font-size:150%;
 }
 
-/* Additional styling for the buttons (optional) */
-.button-container button {
-    margin-top: 350px;
-    margin-left: 80px;
-    margin-right: 80px;
-    background-color: #97B8BA;
-    border: salmon;
+#cabeca{
     
-    padding: 10px 20px;
+    background-color: #44B0D5;
 }
+
 .drop-down{
     display: inline-block;
     position: relative;
+    
 }
 .drop-down-content{
     display: none;
     position: absolute;
     width: 100%;
     overflow: auto;
+    
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
 }
 .drop-down:hover .drop-down-content{
@@ -174,7 +227,853 @@ p{
 .drop-down-content a {
     display: block;
     color: #000000;
+    
     background-color: aliceblue;
     padding: 5px;
     text-decoration: none;
 }
+.carousel-caption {
+    position: absolute;
+    top: 40%;
+    left: 28%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #fff; 
+}
+.text-Carroussel{
+    display: block;
+    font-size: 45px;
+    letter-spacing: 2px;
+    margin-top: 35px;
+}
+.changeColor{
+    color: #022038;
+    
+}
+#changeSize{
+   
+    font-size: 5vw;
+    white-space: nowrap;
+}
+.rodape{
+    background-color:#e2e2e2;
+ 
+   height: 100%;
+    
+    margin-top: 1%;
+    
+    font-family: helvetica;
+}
+
+
+.rodape a{
+    text-decoration: none;
+    color: white;
+    color: black;
+}
+.rodape p{
+    margin-bottom: 0px;
+    color: black;
+    font-size: 1rem;
+}
+.rodape-div{
+    display: flex;
+    flex-wrap: wrap;
+   
+   
+    margin-left: 10%;
+  
+    align-items: stretch;
+   
+}
+ .rodape-div-2, .rodape-div-3, .rodape-div-4, .rodape-div-5{
+    display: flex;
+    width: calc(100% / 4 - 20px);
+    padding: 10px;
+}
+.rodape span{
+    font-size: 1.5rem;
+    color: black;
+}
+.rodape-direitos{
+    font-size: 1rem;
+    
+    margin-bottom: 0;
+    margin-top: 7%;
+    margin-right: 0px;
+    margin-left: 75%;
+    white-space: nowrap;
+    transform: translateX(-50%);
+    text-align:center;
+}
+
+@media screen and (min-width: 768px) and (max-width:1024px)  and (orientation: portrait){
+    .rodape-div-1, .rodape-div-2, .rodape-div-3, .rodape-div-4,.rodape-div-5{
+        width: calc(50% - 20px);
+        padding: 10px;
+        
+    }
+    .rodape-div{
+        padding: 60px 0px 40px 0px;
+    }
+    h1{
+        font-size:4vw;
+        
+    }
+    header{
+        height: 5%;
+    }
+    .cabecalho{
+        font-size: 3vw;
+    }
+    body {
+        overflow-x: hidden;
+      }
+      img{
+        
+        max-width: 100%;
+       
+      }
+      #margem h3{
+        font-size: 5rem;
+      }
+      #margem p{
+        font-size: 2.5rem;
+      }
+      .cabecalho ul {
+        list-style-type: none;
+      
+        justify-content: space-around; 
+        padding: 2;
+    }
+    .header-content {
+        display: flex;
+        align-items: center; 
+    }
+    .cabecalho li {
+        display: inline-block;
+    }
+    .changeSizeMob{
+        font-size: 2rem;
+        margin-top: 5px;
+      }
+    
+   
+      
+      #carouselExampleIndicators {
+        margin-top: 0px;
+        
+        height: 100%;
+        transform: none;
+        position: relative;
+     
+    }
+    .margemImg{
+        margin-top: 8%;
+    }
+ 
+    
+    .carousel-indicators{
+        display: inline;
+        
+       
+         justify-content: center;
+        align-items: center;
+        margin-bottom: 0px;
+        margin-left: 45%;
+        margin-right: 0px;
+        z-index: 1;
+      }
+      
+      .col{
+      
+        border:5rem solid white;
+       border-width: 5vw;
+        height: 15em;
+        box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
+        margin-right: 0rem;
+        margin-top: 0rem;
+        margin-bottom: 0rem;
+        margin-left: 0rem;
+        position: relative;
+     
+    }
+   
+    .red{
+       width: 5rem;
+       transform: translateX(-50%);
+       left: 50%;
+       
+       position: relative;
+        display: block;
+        margin-left: 10px;
+        margin-top: 10px;
+        margin-bottom: 0px;
+    }
+    ul li:nth-child(1){
+        margin-left:25px;
+    }
+    ul li:nth-child(2){
+        margin-left:25px;
+    }
+    ul li:nth-child(3){
+        margin-left:25px;
+    }
+    .drop-down-content {
+       width: 200px;
+       font-size: 2rem;
+        white-space: nowrap;
+        overflow-x: hidden;
+      }
+      .altera-cor2{
+     
+        color:#ffffff;
+        background-color: #5b92db;
+    }
+    .flex-container {
+        display: flex;
+        align-items: center; 
+       
+        width: 100%;
+        height: 100%;
+    }
+    #diabetes{
+    
+        width: 0px;
+        
+    }
+    .rodape{
+        background-color:#e2e2e2;
+        color: black;
+       height: 100%;
+         margin-top: 2%;
+        
+        font-family: helvetica;
+    }
+    
+    .rodape span{
+        font-size: 2.5rem;
+        color: black;
+    }
+    .rodape a{
+        color: black;
+       
+    }
+   
+    .rodape-direitos{
+    font-size: 1rem !important;
+
+    margin-left: 65%;
+    text-align: center;
+    }
+    .rodape p{
+        font-size: 1.5rem;
+    }
+    .carousel-control-prev,
+    .carousel-control-next {
+        top: 50%;
+        transform: translateY(-50%);
+       
+    }
+    .carousel-control-next-icon,
+    .carousel-control-prev-icon{
+        width: 40px;
+        height: 40px;
+    }
+
+    
+    #sabia{
+        font-size:3em;
+       
+    }
+    #par{
+        margin-left: 0px;
+        margin-right: 0px;
+        margin-top: 0px;
+        font-size:1.2em;
+   
+    }
+    .flex-container {
+        display: flex;
+        align-items: center; 
+       
+        width: 100%;
+        height: 100%;
+    }
+    
+
+
+}
+@media screen and (min-width: 768px) and (max-width:1024px)  and (orientation: landscape){
+    .rodape-div-1, .rodape-div-2, .rodape-div-3, .rodape-div-4,.rodape-div-5{
+        width: calc(50% - 20px);
+        padding: 10px;
+        
+    }
+    .rodape-div{
+        padding: 60px 0px 40px 0px;
+    }
+    .container{
+        display: block;
+    }
+    body {
+        overflow-x: hidden;
+      }
+      img{
+        width: 100%;
+        max-width: 100%;
+       
+      }
+      #cabeca{
+        height: 4rem;
+      }
+      h1{
+        font-size:4vw;
+        
+    }
+    .cabecalho{
+        font-size: 3vw;
+    }
+      .cabecalho ul {
+        list-style-type: none;
+      
+        justify-content: space-around; 
+        padding: 2;
+    }
+    .header-content {
+        display: flex;
+        align-items: center; 
+       
+    }
+    .cabecalho li {
+        display: inline-block;
+    }
+      .changeSizeMob{
+        font-size: 1.5rem;
+        margin-top: 5px;
+      }
+      #margem{
+        margin-top: 15%;
+        margin-left: 0%;
+      }
+      #carouselExampleIndicators {
+        margin-top: 0px;
+        
+        height: 100%;
+        transform: none;
+        position: relative;
+     
+    }
+    .margemImg{
+        margin-top: 6%;
+    }
+    .carousel-indicators{
+        display: inline;
+        
+       
+         justify-content: center;
+        align-items: center;
+        margin-bottom: 0px;
+        margin-left: 41%;
+        margin-right: 0px;
+        z-index: 1;
+      }
+      .carousel-indicators li {
+        position: relative;
+        -webkit-box-flex: 0;
+        -ms-flex: 0 1 auto;
+        flex: 0 1 auto;
+        width: 50px;
+        height: 5px;
+        margin-right: 3px;
+        margin-left: 3px;
+        text-indent: -999px;
+        background-color: rgba(255,255,255,.5);
+    }
+    .carousel-control-prev,
+    .carousel-control-next {
+        top: 50%;
+        transform: translateY(-50%);
+       
+    }
+      
+      .col{
+      
+        border:2px solid white;
+     
+      
+        box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
+        margin-right: 0rem;
+        margin-top: 0rem;
+        height: 10em;
+        margin-left: 0rem;
+        margin-bottom: 0rem;
+        position: relative;
+      font-size: 100%;
+    }
+    .red{
+       width: 5rem;
+       transform: translateX(-50%);
+       left: 50%;
+       
+       position: relative;
+        display: block;
+        margin-left: 10px;
+        margin-top: 10px;
+        margin-bottom: 0px;
+    }
+   
+    ul li:nth-child(1){
+        margin-left:45px;
+    }
+    ul li:nth-child(2){
+        margin-left:45px;
+    }
+    ul li:nth-child(3){
+        margin-left:45px;
+    }
+    .drop-down-content {
+       width: 200px;
+       
+        white-space: nowrap;
+        overflow-x: hidden;
+      }
+      .altera-cor2{
+     
+        color:#ffffff;
+        background-color: #5b92db;
+    }
+    .flex-container {
+        display: flex;
+        align-items: center; 
+       
+        width: 100%;
+        height: 100%;
+    }
+    #diabetes{
+    
+        width: 0px;
+        
+    }
+    .rodape{
+        background-color:#e2e2e2;
+        color: black;
+       height: 90%;
+         margin-top: 30px;
+        font-size: 14px;
+        font-family: helvetica;
+    }
+    .rodape span{
+        font-size: 25px;
+        color: black;
+    }
+    .rodape a{
+        color: black;
+    }
+    
+    .rodape-direitos{
+        font-size: 1rem !important;
+    
+        margin-left: 65%;
+        text-align: center;
+        }
+        #sabia{
+            font-size: 3rem;
+           
+        }
+        #par{
+            margin-left: 0px;
+            margin-right: 0px;
+            margin-top: 0px;
+            font-size:100%;
+       
+        }
+ 
+   
+}
+
+@media screen and (min-width: 0px) and (max-width:767px)  and (orientation: portrait){
+  
+
+    .rodape-div-1, .rodape-div-2, .rodape-div-3, .rodape-div-4,.rodape-div-5{
+        width: calc(50% - 20px);
+        padding: 10px;
+       
+        
+    }
+    .rodape-div{
+        padding: 60px 0px 40px 0px;
+        margin-left: 0px;
+        gap: 7vw;
+    }
+    .cabecalho ul {
+        list-style-type: none;
+      
+        justify-content: space-around; 
+        padding: 2;
+    }
+    .header-content {
+        display: flex;
+        align-items: center; 
+    }
+    h1{
+        font-size:4vw;
+        display: inline;
+    }
+    .container {
+        display: block;
+      }
+    .cabecalho{
+        font-size: 3vw;
+    }
+    .cabecalho li {
+        display: inline-block;
+    }
+    h3{
+        font-size: 15vw;
+    }
+    body {
+        overflow-x: hidden;
+       
+      }
+      img{
+        
+        max-width: 100%;
+       
+      }
+      .changeSizeMob{
+        font-size: 1rem;
+        margin-top: 5px;
+      }
+      #margem{
+        margin-top: 15%;
+        margin-left: 0%;
+      }
+      
+      #margem p{
+        font-size: 4vw;
+        margin-left: 14%;
+      }
+      #carouselExampleIndicators {
+        margin-top: 0px;
+        
+        height: 100%;
+        transform: none;
+        position: relative;
+     
+    }
+    .margemImg{
+        margin-top: 12%;
+    }
+      .carousel-indicators{
+        display: inline;
+        
+       
+         justify-content: center;
+        align-items: center;
+        margin-bottom: 0px;
+        margin-left: 35%;
+        margin-right: 0px;
+        z-index: 1;
+      }
+      .col{
+      
+        border:2vw solid white;
+       border-width: 2vw;
+        box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
+        margin-right: 0rem;
+        margin-top: 1rem;
+        width: 10em;
+        height: 12em;
+        margin-left: 0rem;
+        position: relative;
+       
+    }
+    .row{
+        gap: 1%;
+    }
+    .red{
+       width: 3rem;
+       transform: translateX(-50%);
+       left: 50%;
+       
+       position: relative;
+        display: block;
+        margin-left: 0px;
+        margin-top: 0px;
+        margin-bottom: 0px;
+    }
+    ul li:nth-child(1){
+        margin-left:0px;
+       
+    }
+    ul li:nth-child(2){
+        margin-left:0px;
+        
+    }
+    ul li:nth-child(3){
+        margin-left:0px;
+       
+    }
+   
+  
+    .drop-down-content {
+       width: 200px;
+       
+        white-space: nowrap;
+        overflow-x: hidden;
+      }
+      .altera-cor2{
+        height: auto;
+        color:#ffffff;
+        background-color: #5b92db;
+    }
+    .flex-container {
+        display: flex;
+        align-items: center; 
+       
+        width: 100%;
+        height: 100%;
+    }
+    #diabetes{
+    
+        width: 0px;
+        
+    }
+    header{
+        height: 5%;
+        
+    }
+    .rodape{
+        background-color:#e2e2e2;
+        color: black;
+       height: 90%;
+         margin-top: 30px;
+       
+        
+        font-family: helvetica;
+    }
+    .rodape span{
+        font-size: 6vw;
+        color: black;
+    }
+    .rodape a {
+        color: black;
+        font-size: 4vw;
+    }
+    .rodape p{
+        color: black;
+        font-size: 4vw;
+    }
+   
+    .rodape-direitos{
+        font-size: 2vw !important;
+
+    
+    margin-left: 54%;
+    text-align: center;
+    }
+    .carousel-control-prev,
+    .carousel-control-next {
+        top: 58%;
+        transform: translateY(-50%);
+       
+    }
+    #sabia{
+        font-size: 2rem;
+    }
+    #par{
+        margin-left: 0px;
+        margin-right: 0px;
+        margin-top: 0px;
+        font-size:100%;
+    }
+    
+
+
+
+
+}
+@media screen and (min-width: 320px) and (max-width:767px)  and (orientation: landscape){
+
+
+    .rodape-div-1, .rodape-div-2, .rodape-div-3, .rodape-div-4,.rodape-div-5{
+        width: calc(50% - 20px);
+        padding: 10px;
+       
+        
+    }
+    .rodape-div{
+        padding: 60px 0px 40px 0px;
+        margin-left: 50px;
+    }
+
+    body {
+        overflow-x: hidden;
+      }
+      img{
+        width: 100%;
+        max-width: 100%;
+       
+      }
+      .cabecalho ul {
+        list-style-type: none;
+      
+        justify-content: space-around; 
+        padding: 2;
+    }
+    .header-content {
+        display: flex;
+        align-items: center; 
+    }
+    h1{
+        font-size:4vw;
+        
+    }
+    .container {
+        display: flex;
+      }
+    .cabecalho{
+        font-size: 3vw;
+    }
+    .cabecalho li {
+        display: inline-block;
+    }
+      .changeSizeMob{
+        font-size: 1.5rem;
+        margin-top: 5px;
+      }
+      #margem{
+        margin-top: 15%;
+        margin-left: 0%;
+      }
+      #carouselExampleIndicators {
+        margin-top: 0px;
+        
+        height: 100%;
+        transform: none;
+        position: relative;
+     
+    }
+    .margemImg{
+        margin-top: 6%;
+    }
+    .carousel-indicators{
+        display: inline;
+        
+       
+         justify-content: center;
+        align-items: center;
+        margin-bottom: 0px;
+        margin-left: 41%;
+        margin-right: 0px;
+        z-index: 1;
+      }
+      .col{
+      
+        border:1rem solid white;
+        border-width:1rem;
+        box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
+        margin-right: 0rem;
+        margin-left: 0rem;
+        margin-top: 0rem;
+    }
+    .row{
+        gap: 3%;
+    }
+    .red{
+       
+       position: relative;
+        right: -19%;
+        justify-content: center;
+    }
+    ul li:nth-child(1){
+        margin-left:25px;
+        
+    }
+    ul li:nth-child(2){
+        margin-left:25px;
+        
+    }
+    ul li:nth-child(3){
+        margin-left:25px;
+       
+    }
+  
+   
+    .drop-down-content {
+       width: 200px;
+       
+        white-space: nowrap;
+        overflow-x: hidden;
+      }
+      .altera-cor2{
+     
+        color:#ffffff;
+        background-color: #5b92db;
+    }
+    .flex-container {
+        display: flex;
+        align-items: center; 
+       
+        width: 100%;
+        height: 100%;
+    }
+    #diabetes{
+    
+        width: 0px;
+        
+    }
+    .rodape{
+        background-color:#e2e2e2;
+        color: black;
+       height: 90%;
+         margin-top: 30px;
+        font-size: 14px;
+        
+        font-family: helvetica;
+    }
+    .rodape span{
+        font-size: 18px;
+        color: black;
+        margin-left: 25px;
+    }
+    .rodape a {
+        color: black;
+        font-size: 15px;
+        margin-left: 5px;
+    }
+    .rodape p{
+        color: black;
+        font-size: 15px;
+        margin-left: 10px;
+    }
+   
+    .rodape-direitos{
+        font-size: 0.6rem !important;
+
+    
+    margin-left: 70% !important;
+    text-align: center;
+    }
+    .carousel-control-prev,
+    .carousel-control-next {
+        top: 58%;
+        transform: translateY(-50%);
+       
+    }
+    
+
+    #sabia{
+        font-size: 4vw;
+    }
+    #par{
+        margin-left: 0px;
+        margin-right: 0px;
+        margin-top: 0px;
+        font-size: 2vw;
+    }
+}
+
+
+

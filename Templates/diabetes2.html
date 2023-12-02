@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Information Form</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='teste2.css') }}">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+
+<body>
+    {% extends "base.html" %}
+    {% block content %}
+    <div class="form-step">
+        <label for="input-5" class="label-text label-disease">Hipertensão</label>
+        <select id="input-5" name="hipertensao" required>
+            <option value="0">Possuo</option>
+            <option value="1">Não Possuo</option>
+            <option value="2">Não sei</option>
+        </select><br><br>
+        <span class="question-icon">
+            <i class="fas fa-question-circle"></i>
+        </span>
+        <div class="info-tooltip">Só preencha com "Possuo" caso tenha um laudo médico. Se não tiver preencha com
+            "Não sei"</div>
+    </div>
+    <div class="form-step">
+        <label for="input-6" class="label-text label-disease">Dislipidemia</label>
+        <select id="input-6" name="dislipidemia" required>
+            <option value="0">Possuo</option>
+            <option value="1">Não Possuo</option>
+            <option value="2">Não sei</option>
+        </select><br><br>
+        <span class="question-icon">
+            <i class="fas fa-question-circle"></i>
+        </span>
+        <div class="info-tooltip">Só preencha com "Possuo" caso tenha um laudo médico. Se não tiver preencha com
+            "Não sei"</div>
+    </div>
+    {% endblock %}
+
+
+</body>
+
+</html>

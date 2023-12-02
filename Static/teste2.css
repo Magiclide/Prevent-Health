@@ -67,7 +67,7 @@ input, select {
 
 .label-text {
   position: fixed;
- top: 90%;
+ top: 95%;
   right: -8%;
  
   transform: translate(-50%, -300%);
@@ -84,7 +84,7 @@ input, select {
   z-index: 2;
 }
 .label-large{
-  top:98%;
+  top:95%;
   right: -13%;
   width: 27.5vw;
 }
@@ -163,7 +163,7 @@ top: 24vh;
   
   cursor: pointer;
 position: fixed;
-top: 18%;
+top: 22.5%;
 
 right: 22vw;
 

@@ -49,24 +49,9 @@
                 </select><br><br>
             </div>
 
-
-            <div class="form-step">
-                <label for="input-5" class="label-text label-disease">Hipertensão</label>
-                <select id="input-5" name="hipertensao" required>
-                    <option value="0">Possuo</option>
-                    <option value="1">Não Possuo</option>
-                    <option value="2">Não sei</option>
-                </select><br><br>
-
-            </div>
-            <div class="form-step">
-                <label for="input-6" class="label-text label-disease">Dislipidemia</label>
-                <select id="input-6" name="dislipidemia" required>
-                    <option value="0">Possuo</option>
-                    <option value="1">Não Possuo</option>
-                    <option value="2">Não sei</option>
-                </select><br><br>
-            </div>
+            {% block content %}{% endblock %}
+           
+        
             <div class="form-step">
                 <label for="input-7" class="label-text label-pa">Atividade Física</label>
                 <select id="input-7" name="atividade_fisica" required>
@@ -110,7 +95,7 @@
                 <div class="info-tooltip">Digite sua altura em centimetros</div>
             </div>
             <button id="next-button">Next</button>
-            
+
         </form>
         <p class="tip">Aperte Tab ou</p>
         <div class="nav-dots">
