@@ -20,7 +20,7 @@ jobs:
       - name: Set up Python version
         uses: actions/setup-python@v1
         with:
-          python-version: '3.10'
+          python-version: '3.11'
 
       - name: Create and start virtual environment
         run: |
@@ -56,13 +56,6 @@ jobs:
         with:
           name: python-app
 
-
-      - name: Log in to Azure CLI using service principal
-        uses: azure/login@v1
-        with:
-          creds: ${{ secrets.AZURE_CREDENTIALS }}
-
-
       - name: Unzip artifact for deployment
         run: unzip release.zip
 
@@ -73,4 +66,4 @@ jobs:
         with:
           app-name: 'PreventHealth'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_DA7A6B0E647442099E38EDD361E7CADC }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_03140FB8578A420AB16AC387329B67CF }}
