@@ -12,7 +12,7 @@ from formsDislipidemia import predictsFormsDis
 app = Flask(__name__)
 csrf = CSRFProtect(app)  
 app.config['SECRET_KEY'] = '1234'
-
+#teste
 @app.route('/')
 @app.route('/home')
 def home():
