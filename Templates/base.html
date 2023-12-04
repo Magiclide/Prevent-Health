@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Information Form</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='teste2.css') }}">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+
+<body>
+
+    <div class="form-center">
+        <form method="POST" id="formulario" action="/submit_form">
+            {{ form.hidden_tag() }}
+            <div class="form-step">
+                <label for="input-1" class="label-text">Nome inteiro</label>
+                <input type="text" id="input-1" name="nome" required autofocus placeholder="Rafael Silva"><br><br>
+                <span class="question-icon" data-info="Enter your full name">
+                    <i class="fas fa-question-circle"></i>
+                </span>
+                <div class="info-tooltip">Enter your full name here.</div>
+            </div>
+
+            <div class="form-step">
+                <label for="input-2" class="label-text label-gen">Gênero</label>
+                <select id="input-2" name="genero" required>
+                    <option value="0">Masculino</option>
+                    <option value="1">Feminino</option>
+
+                </select><br><br>
+            </div>
+
+            <div class="form-step">
+                <label for="input-3" class="label-text label-age">Idade</label>
+                <input id="input-3" type="number" name="idade" required><br><br>
+            </div>
+            <div class="form-step">
+                <label for="input-4" class="label-text label-large">Grau de Escolaridade</label>
+                <select id="input-4" name="grau_escolaridade" required>
+                    <option value="0">Sem estudo</option>
+                    <option value="1">Ensino fundamental completo</option>
+                    <option value="2">Ensino médio completo</option>
+                    <option value="3">Ensino superior completo</option>
+                    <option value="4">Mestrado completo</option>
+                    <option value="5">Doutorado completo</option>
+                </select><br><br>
+            </div>
+
+            {% block content %}{% endblock %}
+
+
+            <div class="form-step">
+                <label for="input-7" class="label-text label-pa">Atividade Física</label>
+                <select id="input-7" name="atividade_fisica" required>
+                    <option value="0">Zero (Sedentário)</option>
+                    <option value="1">Uma</option>
+                    <option value="2">Duas</option>
+                    <option value="3">Três</option>
+                    <option value="4">Quatro</option>
+                    <option value="5">Cinco</option>
+                    <option value="6">Seis</option>
+                    <option value="7">Sete</option>
+                </select><br><br>
+
+                <span class="question-icon question-pa"
+                    data-info="Responda quantas vezes pratica atividade fisica na semana">
+                    <i class="fas fa-question-circle"></i>
+                </span>
+                <div class="info-tooltip">Responda se pratica atividade fisica moderada pelo menos 2 vezes na semana.
+                </div>
+            </div>
+            <div class="form-step">
+                <label for="input-8" class="label-text label-weight">Peso (kg)</label>
+
+                <input type="number" id="input-8" name="peso" required><br><br>
+                <span class="nav-dot"></span>
+                <span class="question-icon question-weight" data-info="Digite seu peso em kilos">
+                    <i class="fas fa-question-circle"></i>
+                </span>
+                <div class="info-tooltip">Digite seu peso em kilos</div>
+            </div>
+
+            <div class="form-step">
+                <label for="input-9" class="label-text label-height">Altura (cm)</label>
+
+                <input type="number" id="input-9" name="altura" required><br><br>
+
+                <span class="question-icon  question-height" data-info="Digite sua altura em centimetros">
+                    <i class="fas fa-question-circle"></i>
+                </span>
+
+                <div class="info-tooltip">Digite sua altura em centimetros</div>
+            </div>
+            <button id="next-button">Next</button>
+
+        </form>
+        <p class="tip">Aperte Tab ou</p>
+        <div class="nav-dots">
+
+            <span class="nav-dot" id="one"></span>
+            <span class="nav-dot" id="two"></span>
+            <span class="nav-dot" id="three"></span>
+            <span class="nav-dot " id="four"></span>
+            <span class="nav-dot" id="five"></span>
+            <span class="nav-dot" id="six"></span>
+            <span class="nav-dot" id="seven"></span>
+            <span class="nav-dot" id="eight"></span>
+            <span class="nav-dot" id="nine"></span>
+        </div>
+
+        <script src="{{ url_for('static', filename='teste.js') }}"></script>
+</body>
+
+=======
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Information Form</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='teste2.css') }}">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+
+<body>
+
+    <div class="form-center">
+        <form method="POST" id="formulario" action="/submit_form">
+            {{ form.hidden_tag() }}
+            <div class="form-step">
+                <label for="input-1" class="label-text">Nome inteiro</label>
+                <input type="text" id="input-1" name="nome" required autofocus placeholder="Rafael Silva"><br><br>
+                <span class="question-icon" data-info="Enter your full name">
+                    <i class="fas fa-question-circle"></i>
+                </span>
+                <div class="info-tooltip">Enter your full name here.</div>
+            </div>
+
+            <div class="form-step">
+                <label for="input-2" class="label-text label-gen">Gênero</label>
+                <select id="input-2" name="genero" required>
+                    <option value="0">Masculino</option>
+                    <option value="1">Feminino</option>
+
+                </select><br><br>
+            </div>
+
+            <div class="form-step">
+                <label for="input-3" class="label-text label-age">Idade</label>
+                <input id="input-3" type="number" name="idade" required><br><br>
+            </div>
+            <div class="form-step">
+                <label for="input-4" class="label-text label-large">Grau de Escolaridade</label>
+                <select id="input-4" name="grau_escolaridade" required>
+                    <option value="0">Sem estudo</option>
+                    <option value="1">Ensino fundamental completo</option>
+                    <option value="2">Ensino médio completo</option>
+                    <option value="3">Ensino superior completo</option>
+                    <option value="4">Mestrado completo</option>
+                    <option value="5">Doutorado completo</option>
+                </select><br><br>
+            </div>
+
+            {% block content %}{% endblock %}
+
+
+            <div class="form-step">
+                <label for="input-7" class="label-text label-pa">Atividade Física</label>
+                <select id="input-7" name="atividade_fisica" required>
+                    <option value="0">Zero (Sedentário)</option>
+                    <option value="1">Uma</option>
+                    <option value="2">Duas</option>
+                    <option value="3">Três</option>
+                    <option value="4">Quatro</option>
+                    <option value="5">Cinco</option>
+                    <option value="6">Seis</option>
+                    <option value="7">Sete</option>
+                </select><br><br>
+
+                <span class="question-icon question-pa"
+                    data-info="Responda quantas vezes pratica atividade fisica na semana">
+                    <i class="fas fa-question-circle"></i>
+                </span>
+                <div class="info-tooltip">Responda se pratica atividade fisica moderada pelo menos 2 vezes na semana.
+                </div>
+            </div>
+            <div class="form-step">
+                <label for="input-8" class="label-text label-weight">Peso (kg)</label>
+
+                <input type="number" id="input-8" name="peso" required><br><br>
+                <span class="nav-dot"></span>
+                <span class="question-icon question-weight" data-info="Digite seu peso em kilos">
+                    <i class="fas fa-question-circle"></i>
+                </span>
+                <div class="info-tooltip">Digite seu peso em kilos</div>
+            </div>
+
+            <div class="form-step">
+                <label for="input-9" class="label-text label-height">Altura (cm)</label>
+
+                <input type="number" id="input-9" name="altura" required><br><br>
+
+                <span class="question-icon  question-height" data-info="Digite sua altura em centimetros">
+                    <i class="fas fa-question-circle"></i>
+                </span>
+
+                <div class="info-tooltip">Digite sua altura em centimetros</div>
+            </div>
+            <button id="next-button">Next</button>
+
+        </form>
+        <p class="tip">Aperte Tab ou</p>
+        <div class="nav-dots">
+
+            <span class="nav-dot" id="one"></span>
+            <span class="nav-dot" id="two"></span>
+            <span class="nav-dot" id="three"></span>
+            <span class="nav-dot " id="four"></span>
+            <span class="nav-dot" id="five"></span>
+            <span class="nav-dot" id="six"></span>
+            <span class="nav-dot" id="seven"></span>
+            <span class="nav-dot" id="eight"></span>
+            <span class="nav-dot" id="nine"></span>
+        </div>
+
+        <script src="{{ url_for('static', filename='teste.js') }}"></script>
+</body>
+
+
+</html>
