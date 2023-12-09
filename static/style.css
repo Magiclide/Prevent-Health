@@ -16,7 +16,7 @@ html,body{
     
 }
 .red-text{
-    font-size: 1em;
+    font-size: 100%;
 }
 
 #carouselExampleIndicators {
@@ -98,7 +98,7 @@ h1{
     box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
     margin-right: 0em;
     margin-top: 0rem;
-    height: 14em;
+    height: 100%;
     margin-left: 0em;
     
     
