@@ -3,15 +3,24 @@ import json
 import joblib
 import numpy as np
 import pandas as pd
+from azureml.core import Workspace
+from azureml.core.model import Model
 from flask import Flask, jsonify, render_template, request, url_for
 from flask_wtf import CSRFProtect
-from formsHipertensao import predictsFormsHip
+
 from forms import predictsForms
 from formsDislipidemia import predictsFormsDis
+from formsHipertensao import predictsFormsHip
 
 app = Flask(__name__)
 csrf = CSRFProtect(app)  
 app.config['SECRET_KEY'] = '1234'
+
+ws = Workspace.get(name="PreventHealthModel", subscription_id='d8f9f3d7-27cb-4ccc-9ead-485a3ed99423', resource_group='appsvc_linux_centralus')
+model_path = Model.get_model_path('diabetes', _workspace=ws)
+
+
+
 
 @app.route('/')
 @app.route('/home')
@@ -47,7 +56,7 @@ def fazer_previsao(dados_de_entrada):
     input_data = np.array(dados_de_entrada)
     print(input_data)
     if('diabetes' not in dados_de_entrada.columns):
-        modelo = joblib.load('D:\\Desktop\\apiMestrado\\modelFiles\\diabetes.pkl') 
+        modelo = joblib.load(model_path)
         previsao = modelo.predict_proba(input_data)
     elif('hipertensao' not in dados_de_entrada.columns):
         modelo = joblib.load('D:\\Desktop\\apiMestrado\\modelFiles\\hipertensao.pkl') 
