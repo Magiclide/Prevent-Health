@@ -16,9 +16,11 @@ app = Flask(__name__)
 csrf = CSRFProtect(app)  
 app.config['SECRET_KEY'] = '1234'
 
-ws = Workspace.get(name="PreventHealthModel", subscription_id='d8f9f3d7-27cb-4ccc-9ead-485a3ed99423', resource_group='appsvc_linux_centralus')
-model_path = Model.get_model_path('diabetes', _workspace=ws)
 
+def get_workspace_and_model_path():
+    ws = Workspace.get(name="PreventHealthModel", subscription_id='d8f9f3d7-27cb-4ccc-9ead-485a3ed99423', resource_group='appsvc_linux_centralus')
+    model_path = Model.get_model_path('diabetes', _workspace=ws)
+    return model_path
 
 
 
@@ -52,7 +54,7 @@ def prever():
 
 
 def fazer_previsao(dados_de_entrada):
-  
+    model_path=get_workspace_and_model_path()
     input_data = np.array(dados_de_entrada)
     print(input_data)
     if('diabetes' not in dados_de_entrada.columns):
