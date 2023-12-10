@@ -4,6 +4,7 @@ import joblib
 import numpy as np
 import pandas as pd
 from azureml.core import Workspace
+from azureml.core.authentication import ServicePrincipalAuthentication
 from azureml.core.model import Model
 from flask import Flask, jsonify, render_template, request, url_for
 from flask_wtf import CSRFProtect
@@ -18,9 +19,19 @@ app.config['SECRET_KEY'] = '1234'
 
 
 def get_workspace_and_model_path():
-    ws = Workspace.get(name="PreventHealthModel", subscription_id='d8f9f3d7-27cb-4ccc-9ead-485a3ed99423', resource_group='appsvc_linux_centralus')
-    model_path = Model.get_model_path('diabetes', _workspace=ws)
-    return model_path
+   svc_pr = ServicePrincipalAuthentication(
+    tenant_id="db63730b-8f3b-41a1-aad1-cfe7379dea09",
+    service_principal_id="7694deb8-d90e-4c16-9980-ea394e64e8e4",
+    service_principal_password="LgY8Q~cVuvdkTWA_YULDdlsgGsiI4zTb3Gnkmasj")
+
+   ws = Workspace.get(
+    name="PreventHealthModel",
+    subscription_id="d8f9f3d7-27cb-4ccc-9ead-485a3ed99423",
+    resource_group="appsvc_linux_centralusp",
+    auth=svc_pr)
+
+   model_path = Model.get_model_path('diabetes', _workspace=ws)
+   return model_path
 
 
 
@@ -48,7 +59,7 @@ def dislipidemia():
 def prever():
     dados_de_entrada = request.json  
     print(dados_de_entrada);
-    resultado = fazer_previsao_diab(dados_de_entrada)
+    resultado = fazer_previsao(dados_de_entrada)
     
     return jsonify({'resultado': resultado.tolist()})
 
@@ -214,5 +225,10 @@ def submit_form():
             return jsonify({"form_errors": errors})
 
         
-
+'''{
+  "appId": "7694deb8-d90e-4c16-9980-ea394e64e8e4",
+  "displayName": "PreventHealth",
+  "password": "LgY8Q~cVuvdkTWA_YULDdlsgGsiI4zTb3Gnkmasj",
+  "tenant": "db63730b-8f3b-41a1-aad1-cfe7379dea09"
+}'''
 

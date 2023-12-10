@@ -227,10 +227,14 @@ a{
 .drop-down-content a {
     display: block;
     color: #000000;
-    
+    font-family:'Times New Roman', Times, serif;
     background-color: aliceblue;
     padding: 5px;
+    box-shadow: 0px 2px 20px 0px rgba(0,0,0,0.2);
     text-decoration: none;
+}
+.drop-down-content a:hover{
+    color: blue;
 }
 .carousel-caption {
     position: absolute;
@@ -424,6 +428,7 @@ a{
        font-size: 2rem;
         white-space: nowrap;
         overflow-x: hidden;
+        
       }
       .altera-cor2{
      

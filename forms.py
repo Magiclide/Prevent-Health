@@ -1,5 +1,5 @@
 from flask_wtf import FlaskForm
-from wtforms import (IntegerField, SelectField, StringField, SubmitField,
+from wtforms import (IntegerField, SelectField, StringField, SubmitField,FloatField,
                      validators)
 from wtforms.validators import DataRequired, Length
 
@@ -12,7 +12,7 @@ class predictsForms(FlaskForm):
     hipertensao=SelectField('hipertensao', choices=[("0", "Possuo"), ("1", "Não Possuo"),("2", "Não sei")], validators=[DataRequired("Por favor selecione uma opção")])
     dislipidemia=SelectField('dislipidemia', choices=[("0", "Possuo"), ("1", "Não Possuo"),("0", "Não sei")], validators=[DataRequired("Por favor selecione uma opção")])
     atividade_fisica=SelectField('atividade_fisica', choices=[("0", "Zero"), ("1", "Uma"),("2", "Duas"),("3", "Tres"),("4", "Quatro"),("5", "Cinco"),("6", "Seis"),("7", "Sete")],validators=[DataRequired("Por favor selecione uma opção")])
-    peso=IntegerField('peso',validators=[DataRequired("Por favor digite um peso"),validators.NumberRange(min=0,max=400,message="Peso Invalido")])
+    peso=FloatField('peso',validators=[DataRequired("Por favor digite um peso"),validators.NumberRange(min=0,max=400,message="Peso Invalido")])
     altura=IntegerField('altura',validators=[DataRequired("Por favor digite uma altura"),validators.NumberRange(min=50,max=250,message="Altura Invalida")])
     
 
