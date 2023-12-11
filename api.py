@@ -25,9 +25,9 @@ def get_workspace_and_model_path():
     service_principal_password="LgY8Q~cVuvdkTWA_YULDdlsgGsiI4zTb3Gnkmasj")
 
    ws = Workspace.get(
-    name="PreventHealth",
+    name="PreventHealthModel",
     subscription_id="d8f9f3d7-27cb-4ccc-9ead-485a3ed99423",
-    resource_group="appsvc_linux_centralusp",
+    resource_group="appsvc_linux_centralus",
     auth=svc_pr)
 
    model_path = Model.get_model_path('diabetes', _workspace=ws)
