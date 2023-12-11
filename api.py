@@ -26,7 +26,7 @@ def get_workspace_and_model_path():
 
    ws = Workspace.get(
     name="PreventHealthModel",
-    subscription_id="d8f9f3d7-27cb-4ccc-9ead-485a3ed99423",
+    subscription_id="db63730b-8f3b-41a1-aad1-cfe7379dea09",
     resource_group="appsvc_linux_centralusp",
     auth=svc_pr)
 
