@@ -12,6 +12,7 @@
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
@@ -47,7 +48,7 @@
                 </ol>
                 <div class="carousel-inner">
                     <div class="carousel-item active">
-                        <img class="w-100 margemImg " src="{{ url_for('static', filename='bannerjpg.jpg') }}"
+                        <img class="w-100 margemImg " src="{{ url_for('static', filename='principal.jpeg') }}"
                             alt="Primeiro slide">
                         <div class="carousel-caption changeColor">
 
@@ -58,27 +59,15 @@
                         </div>
                     </div>
                     <div class="carousel-item">
-                        <img class="w-100 margemImg" src="{{ url_for('static', filename='testeSimbolo.jpg') }}"
+                        <img class="w-100 margemImg" src="{{ url_for('static', filename='signHealth.jpeg') }}"
                             alt="Segundo slide">
-                        <div class="carousel-caption">
 
-                            <h3 class="changeSizeMob">Modelos disponiveis:</h3>
-                            <ol>
-                                <li class="text-Carroussel changeSizeMob ">Diabetes</li>
-                                <li class="text-Carroussel changeSizeMob">Hipertensão</li>
-                                <li class="text-Carroussel changeSizeMob">Dislipidemia</li>
-                            </ol>
-                        </div>
                     </div>
 
                     <div class="carousel-item">
-                        <img class="w-100 margemImg" src="{{ url_for('static', filename='dedoMedicores.jpg') }}"
+                        <img class="w-100 margemImg" src="{{ url_for('static', filename='dedomedico.jpeg') }}"
                             alt="Terceiro slide">
-                        <div class="carousel-caption changeColor">
 
-                            <h3 class="changeSizeMob">Nosso Modelo trabalha com <br>variáveis de facil acesso</h3>
-
-                        </div>
                     </div>
 
                 </div>
@@ -97,8 +86,8 @@
         </div>
 
         <div id="margem">
-            <h3 class="justify-content-center d-flex altera-cor">Diferencias</h3>
-            <p class="justify-content-center d-flex altera-cor">De uma olhada nos nossos diferencias</p>
+            <h3 class="justify-content-center d-flex altera-cor">Diferenciais</h3>
+            <p class="justify-content-center d-flex altera-cor">De uma olhada nos nossos diferenciais</p>
         </div>
 
         <div class="container text-center ">
@@ -131,6 +120,54 @@
         </section>
 
     </main>
+    <div id="frequent-questions">
+        <h3 id="frequent" class="center-text">Perguntas Frequentes</h3>
+
+
+
+
+        <div id="rectanglesF">
+
+
+            <div class="rectangle">Vocês terão acesso as minhas informações pessoais?
+                <span class="arrow" id="arrow1"></span>
+                <div id="additionalText1" class="additional-text">
+                    <p id="text1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit ut rerum voluptatum
+                        similique non temporibus. Placeat harum, ex maiores nisi soluta corrupti amet illum doloremque
+                        alias officiis, earum suscipit veritatis!</p>
+                </div>
+            </div>
+
+            <div class="rectangle marginRec">Quais informações preciso passar para fazer a previsão?
+                <span class="arrow  " id="arrow2"></span>
+                <div id="additionalText2" class="additional-text">
+                    <p id="text2">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolorem ab at eveniet
+                        quisquam? Perspiciatis, similique, minima, ratione natus sed sit voluptate veritatis in
+                        inventore quos quisquam corrupti exercitationem quae. Quod?</p>
+                </div>
+            </div>
+        </div>
+        <div id="rectanglesL">
+            <div class="rectangle">Como funciona o modelo?
+                <span class="arrow" id="arrow3"></span>
+                <div id="additionalText3" class="additional-text">
+                    <p id="text3">O modelo funciona a partir de informações simples digitadas pelo usuario que passarão
+                        por um modelo de IA com base em machine learning e retornarão uma previsão em porcentagem da
+                        probabilidade de possuir determinada doença</p>
+                </div>
+            </div>
+            <div class="rectangle marginRec">Qual a acurácia dos modelos de previsão?
+                <span class="arrow" id="arrow4"></span>
+                <div id="additionalText4" class="additional-text">
+                    <p id="text4">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Suscipit nobis tempora quas
+                        sapiente magnam incidunt saepe, inventore maiores consequatur voluptatibus, molestiae quisquam
+                        exercitationem, mollitia ipsa repudiandae praesentium repellendus distinctio cumque!</p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
     <footer class="rodape" id="contato">
         <div class="rodape-div">
 
@@ -181,7 +218,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
         crossorigin="anonymous"></script>
-
+    <script src="{{ url_for('static', filename='homeScript.js') }}"></script>
 </body>
 
 </html>
