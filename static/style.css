@@ -7,6 +7,12 @@ html,body{
     height: auto;
     max-height: 465px;
 }
+#diseaseSection{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 8%;
+}
 
 #frequent-questions {
   
@@ -24,8 +30,62 @@ html,body{
  
     
   }
-  #cor{
+
+  #diabFlex{
+    display: flex;
     
+  }
+  #hipFlex{
+    display: flex;
+    flex-direction: row-reverse;
+  }
+  #hipContainer{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    
+    margin-top:3%;
+    left:0%;
+  }
+  #medPressao{
+    border-radius: 8px;
+    position: relative;
+    left: 2%;
+    
+  }
+  #hipSection{
+
+  }
+ #canetaList li{
+    font-weight: 400;
+    display: list-item;
+    
+ }
+ #canetaList{
+    list-style-type: disc;
+    
+ }
+ .btn-primary{
+    background-color: #68B9D7;
+    width: 7rem;
+    margin-top: 8%;
+    border-color: black;
+ }
+
+  #infoContainer {
+    
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    left: 2%;
+    margin-top:3%;
+}
+  #conhecaDiabetes{
+    font-size: 1.75rem;
+    font-family: Mulish,sans-serif;
+    line-height: 1.2;
+    font-weight: 700;
+    display: block;
   }
   .marginRec{
     margin-left: 2%;
@@ -141,6 +201,7 @@ html,body{
 *{
     margin: 0px;
     padding: 0px;
+    font-family: Mulish,sans-serif;
 }
 a{
   text-decoration: none;  
@@ -266,9 +327,13 @@ a{
     height: 100%;
 }
 
-
+.flex-container div {
+    position: relative;
+}
 .d-flex {
     flex: 1;
+    width: 100%; 
+        height: auto;
 }
 .flex-container img {
     flex: 0 0 auto; 
@@ -282,19 +347,46 @@ a{
 
 #diabetes{
     
-    max-width: 100%;
-    height: 100%;
+    width: 100%;
     
 }
+#infoBlock{
+    position: absolute;
+    top: 50%; /* Adjust vertical positioning */
+    left: 50%; /* Adjust horizontal positioning */
+    transform: translate(-50%, -50%);
+    text-align: center; /* Center text within the container */
+    color: rgb(0, 0, 0); /* Change text color as needed */
+    background-color: white;
+    border-radius: 8px;
+   
+    padding: 24px;
+}
 .altera-cor2{
-    height: 50vh;
+    height: 481px;
     margin-top: 17rem;
     color:#ffffff;
-    background-color: #5b92db;
+   
+}
+#caneta{
+    border-radius: 8px;
+    position: relative;
+    left: 0%;
+    top:5%;
+}
+#diabetesP{
+    font-size: 1rem;
+    font-family: Mulish,sans-serif;
 }
 #sabia{
-
-    font-size: 2rem;
+    font-weight: 500;
+    font-style: normal;
+    letter-spacing: 0.5px;
+    line-height: 24px;
+    font-size: 1.75rem;
+    color:#333;
+    font-family: Mulish,sans-serif;
+    margin-bottom: 1rem;
 }
 #par{
     margin-left: 0px;
@@ -420,6 +512,15 @@ a{
         padding: 10px;
         
     }
+    #caneta,#medPressao{
+        width: 350px;
+        left: 0%;
+    }
+   
+    #infoContainer,#hipContainer{
+        left: 0%;
+    }
+    
     .rodape-div{
         padding: 60px 0px 40px 0px;
     }
@@ -477,7 +578,7 @@ a{
      
     }
     .margemImg{
-        margin-top: 8%;
+        
     }
  
     
@@ -537,7 +638,7 @@ a{
       .altera-cor2{
      
         color:#ffffff;
-        background-color: #5b92db;
+      
     }
     .flex-container {
         display: flex;
@@ -548,8 +649,11 @@ a{
     }
     #diabetes{
     
-        width: 0px;
+        height: 460px;
         
+    }
+    .rectangle{
+        height: auto;
     }
     .rodape{
         background-color:#e2e2e2;
@@ -625,6 +729,7 @@ a{
     .container{
         display: block;
     }
+   
     body {
         overflow-x: hidden;
       }
@@ -674,7 +779,7 @@ a{
      
     }
     .margemImg{
-        margin-top: 6%;
+        
     }
     .carousel-indicators{
         display: inline;
@@ -750,7 +855,7 @@ a{
       .altera-cor2{
      
         color:#ffffff;
-        background-color: #5b92db;
+      
     }
     .flex-container {
         display: flex;
@@ -761,8 +866,16 @@ a{
     }
     #diabetes{
     
-        width: 0px;
+       height: 450px;
         
+    }
+    #caneta,#medPressao{
+        left: 0%;
+        height: 305px;
+        width: 50%;
+    }
+    #hipContainer,#infoContainer{
+        left: 0%;
     }
     .rodape{
         background-color:#e2e2e2;
@@ -811,6 +924,24 @@ a{
         align-items: center;
     
       }
+      #diabFlex{
+        flex-direction: column;
+      }
+      #hipFlex{
+        flex-direction: column;
+      }
+      #infoContainer{
+        left: 0%;
+      }
+      #caneta{
+        left: 0%;
+      }
+      #medPressao{
+        left: 0%;
+      }
+      #hipContainer{
+        left: 0%;
+      }
 
     #frequent-questions {
        
@@ -851,7 +982,7 @@ a{
         background-color:white;
         color: #333;
         text-align: center;
-       
+       height: 100%;
         margin-top: 10%;
         width: 60%;
         border-radius: 6px;
@@ -940,7 +1071,7 @@ a{
       
       #margem p{
         font-size: 4vw;
-        margin-left: 14%;
+        
       }
       #carouselExampleIndicators {
         margin-top: 0px;
@@ -1018,9 +1149,9 @@ a{
         overflow-x: hidden;
       }
       .altera-cor2{
-        height: auto;
+        
         color:#ffffff;
-        background-color: #5b92db;
+        
     }
     .flex-container {
         display: flex;
@@ -1030,9 +1161,20 @@ a{
         height: 100%;
     }
     #diabetes{
-    
-        width: 0px;
+        height: 680px;
         
+    
+        
+    }
+    #frequent-questions{
+        margin-top: 38%;
+    }
+    #rectanglesF,#rectanglesL{
+        align-items:initial;
+    }
+    #infoBlock{
+        padding: 10px;
+        width: 80%;
     }
     header{
         height: 5%;
@@ -1101,6 +1243,14 @@ a{
         padding: 60px 0px 40px 0px;
         margin-left: 50px;
     }
+    #caneta,#medPressao{
+        left: 0%;
+        height: 160px;
+        width: 80%;
+    }
+    #infoContainer,#hipContainer{
+        left: 0%;
+    }
 
     body {
         overflow-x: hidden;
@@ -1150,7 +1300,7 @@ a{
      
     }
     .margemImg{
-        margin-top: 6%;
+        
     }
     .carousel-indicators{
         display: inline;
@@ -1204,7 +1354,7 @@ a{
       .altera-cor2{
      
         color:#ffffff;
-        background-color: #5b92db;
+       
     }
     .flex-container {
         display: flex;
@@ -1215,7 +1365,7 @@ a{
     }
     #diabetes{
     
-        width: 0px;
+        height: 580px;
         
     }
     .rodape{
