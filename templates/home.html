@@ -21,6 +21,19 @@
 
         <div class="header-content">
             <h1>Prevent Health</h1>
+            <button id="liLogin" class="cabecalho"><a class="btn " id="login"><img
+                        src="https://www.unimed.coop.br/site/o/sites-theme/images/icons/menu_login-icon-white.svg"
+                        id="user">Login</a></button>
+            <div class="container2" onclick="myFunction(this)">
+
+
+
+                <div class="bar1"></div>
+                <div class="bar2"></div>
+                <div class="bar3"></div>
+
+            </div>
+
             <nav class="cabecalho">
                 <ul class="cabecalho">
                     <div class="drop-down">
@@ -33,10 +46,35 @@
                     </div>
                     <li class="cabecalho"><a href="#">Sobre nós</a></li>
                     <li class="cabecalho"><a href="#">Contato</a></li>
+                    <li class="cabecalho"><a class="btn " id="login"><img
+                                src="https://www.unimed.coop.br/site/o/sites-theme/images/icons/menu_login-icon-white.svg"
+                                id="user">Login</a>
+                    </li>
                 </ul>
             </nav>
         </div>
     </header>
+    <div id="sidebar" class="mobile-only">
+
+
+        <ul id="menu">
+            <li><a href="#">Sobre Nós</a></li>
+            <li>
+                <a href="#" id="modelosLink">Modelos
+                    <img id="arrowIcon"
+                        src="https://www.unimed.coop.br/site/o/sites-theme/images/icons/ic_keyboard_arrow_up_24px.svg">
+                </a>
+
+
+                <ul class="submenu">
+                    <li><a href="#">Diabetes</a></li>
+                    <li><a href="#">Hipertensão</a></li>
+                    <li><a href="#">Dislipidemia</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Sair</a></li>
+        </ul>
+    </div>
     <main>
         <div id="cor">
             <div id="carouselExampleIndicators" class="carousel slide background-image" data-ride="carousel">
@@ -48,7 +86,7 @@
                 </ol>
                 <div class="carousel-inner">
                     <div class="carousel-item active">
-                        <img class="w-100 margemImg " src="{{ url_for('static', filename='principal.jpeg') }}"
+                        <img class="w-100 margemImg " src="{{ url_for('static', filename='family.jpeg') }}"
                             alt="Primeiro slide">
                         <div class="carousel-caption changeColor">
 
@@ -59,13 +97,13 @@
                         </div>
                     </div>
                     <div class="carousel-item">
-                        <img class="w-100 margemImg" src="{{ url_for('static', filename='signHealth.jpeg') }}"
+                        <img class="w-100 margemImg" src="{{ url_for('static', filename='testeV.jpeg') }}"
                             alt="Segundo slide">
 
                     </div>
 
                     <div class="carousel-item">
-                        <img class="w-100 margemImg" src="{{ url_for('static', filename='dedomedico.jpeg') }}"
+                        <img class="w-100 margemImg" src="{{ url_for('static', filename='medicos.jpeg') }}"
                             alt="Terceiro slide">
 
                     </div>
@@ -154,7 +192,7 @@
             <div class="flex-container">
 
                 <div>
-                    <img src="{{ url_for('static', filename='newDiabetes.jpeg') }}" class="d-flex" id="diabetes" />
+                    <img src="{{ url_for('static', filename='verdadeiraVerde.jpg') }}" class="d-flex" id="diabetes" />
                     <div id="infoBlock">
                         <h3 id="sabia">Você sabia?</h3>
                         <p id="diabetesP">No mundo existem aproximadamente 540

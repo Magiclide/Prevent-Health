@@ -3,6 +3,89 @@ html,body{
     overflow-x: hidden;
 }
 
+
+.container2 {
+    display: none;
+    cursor: pointer;
+    position: relative;
+    left: 14rem;
+  }
+  
+  .bar1, .bar2, .bar3 {
+    width: 35px;
+    height: 5px;
+    background-color: #333;
+    margin: 6px 0;
+    transition: 0.4s;
+    z-index: 5;
+   
+    
+  }
+  #secondHeader{
+    display: none;
+    align-items: center;
+    background-color: #ffffff;
+    margin-bottom: 0px;
+    position: sticky;
+    z-index: 5;
+    width: 100%;
+   
+    height: 3.5rem;
+  }
+  #secondHeader h1{
+    display: none;
+  }
+
+  
+  /* Rotate first bar */
+  .change .bar1 {
+    transform: translate(0, 11px) rotate(-45deg);
+  }
+  
+  /* Fade out the second bar */
+  .change .bar2 {opacity: 0;}
+  
+  /* Rotate last bar */
+  .change .bar3 {
+    transform: translate(0, -11px) rotate(45deg);
+  }
+  #sidebar ul {
+    list-style: none;
+    padding-left: 0px;
+    margin: 0;
+  }
+
+  #sidebar a {
+    text-decoration: none;
+    color: #333;
+  }
+  #sidebar{
+    z-index: 10;
+  }
+#menu{
+    display: flex;
+    flex-direction: column;
+    
+}
+#menu li{
+    border-bottom: 2px solid #E2E2E2;
+    padding: 20px;
+    margin-right: 0;
+    
+    
+}
+.submenu{
+    display: none;
+}
+.visible{
+    display: flex;
+    flex-direction: column;
+}
+.submenu li{
+    border-bottom:0 !important;
+}
+ 
+
 .carousel-item img{
     height: auto;
     max-height: 465px;
@@ -66,10 +149,21 @@ html,body{
     
  }
  .btn-primary{
-    background-color: #68B9D7;
+    background-color: #256843;
     width: 7rem;
     margin-top: 8%;
     border-color: black;
+ }
+ #login{
+    background-color: #007F4D;
+    width: 7rem;
+    margin-left: 90%;
+ }
+ #login:hover{
+    background-color: #256843;
+ }
+ #liLogin{
+    display: none;
  }
 
   #infoContainer {
@@ -93,6 +187,17 @@ html,body{
   #rectanglesF,#rectanglesL{
     display: flex;
 
+  }
+  .mobile-only{
+    display: none;
+    position: fixed;
+ 
+    left: -100%; 
+    width: 100%; 
+    height: 100%;
+    background-color: #f4f4f4;
+    
+    transition: left 0.3s ease-in-out;
   }
 
 
@@ -232,15 +337,20 @@ h3{
 
 .cabecalho li {
     display: inline-block;
+    font-weight: 400;
+}
+#user{
+    width: 30%;
+    margin-right: 8px;
 }
 h1{
-    font-size: 2vw;
+    font-size: 1.5vw;
    
     letter-spacing: 0px;
-   
+   font-weight: 400;
     color:#0A2F46;
     display: inline;
-    
+    margin-bottom: 0px;
 }
 
 
@@ -396,11 +506,14 @@ a{
 }
 
 #cabeca{
-    display: flex;
+    
     align-items: center;
-    background-color: #44B0D5;
+    background-color: #ffffff;
     margin-bottom: 0px;
     position: sticky;
+    display: flex;
+    justify-content: center;
+    height: 3.5rem;
 }
 
 .drop-down{
@@ -526,7 +639,7 @@ a{
     }
     h1{
         font-size:4vw;
-        
+        font-weight: 400;
     }
     header{
         height: 5%;
@@ -561,6 +674,7 @@ a{
     }
     .cabecalho li {
         display: inline-block;
+       
     }
     .changeSizeMob{
         font-size: 2rem;
@@ -915,9 +1029,32 @@ a{
 }
 
 @media screen and (min-width: 0px) and (max-width:767px)  and (orientation: portrait){
-
-
-
+     
+    .container2 {
+        display: block;
+        cursor: pointer;
+        position:initial;
+        margin-right: 5%;
+      }
+    .cabecalho{
+        display: none;
+    }
+    #cabeca{
+        display:inline;
+    }
+    .header-content{
+        justify-content: space-around;
+    }
+    #login{
+        margin-left: 0;
+    }
+    
+    #liLogin{
+        display: inline-block;
+        background-color: white;
+        border: 0;
+        margin-right: 0%;
+    }
     #rectanglesF,#rectanglesL{
         display: flex;
         flex-direction: column;
@@ -1033,11 +1170,12 @@ a{
     .header-content {
         display: flex;
         align-items: center; 
+        justify-content: space-between;
     }
     h1{
         font-size:4vw;
         display: inline;
-        margin-bottom: 0.25rem;
+        
     }
     .container {
         display: block;
@@ -1085,6 +1223,7 @@ a{
         
     }
     #cabeca{
+        justify-content: flex-start;
         
     }
     .margemImg{

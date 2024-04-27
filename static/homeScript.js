@@ -53,3 +53,21 @@
     if(!isAdditionalTextTwoVisible && !isAdditionalTextThreeVisible && !isAdditionalTextOneVisible) backgroundFrequentQuestions.classList.toggle('expandBackground')
     isAdditionalTextFourVisible=!isAdditionalTextFourVisible
   });
+  function myFunction(x) {
+    x.classList.toggle("change");
+    
+      var sidebar = document.getElementById('sidebar');
+    
+      sidebar.style.display= (sidebar.style.display==='none') ? 'none' : 'block';
+      sidebar.style.left = (sidebar.style.left === '' || sidebar.style.left === '-100%') ? '0' : '-100%';
+    
+  }
+  document.addEventListener("DOMContentLoaded", function () {
+    var modelosLink = document.getElementById("modelosLink");
+    var arrowIcon = document.getElementById("arrowIcon");
+    var submenu = document.querySelector("#menu .submenu");
+
+    modelosLink.addEventListener("click", function () {
+        submenu.classList.toggle("visible");
+    });
+});
